@@ -1,23 +1,23 @@
---- upb.c	2019-02-04 03:57:16.243499802 -0500
-+++ upb.c.orig	2019-02-04 03:55:02.720998171 -0500
-@@ -6425,10 +6425,9 @@
+--- upb.c.orig	2019-02-04 03:55:02.720998171 -0500
++++ upb.c	2019-02-04 03:57:16.243499802 -0500
+@@ -6425,9 +6425,10 @@
  /* A simple "subclass" of upb_table that only adds a hash function for strings. */
  
  static upb_tabkey strcopy(lookupkey_t k2, upb_alloc *a) {
--  uint32_t len = (uint32_t) k2.str.len;
++  uint32_t len = (uint32_t) k2.str.len;
    char *str = upb_malloc(a, k2.str.len + sizeof(uint32_t) + 1);
    if (str == NULL) return 0;
--  memcpy(str, &len, sizeof(uint32_t));
-+  memcpy(str, &k2.str.len, sizeof(uint32_t));
+-  memcpy(str, &k2.str.len, sizeof(uint32_t));
++  memcpy(str, &len, sizeof(uint32_t));
    memcpy(str + sizeof(uint32_t), k2.str.str, k2.str.len + 1);
    return (uintptr_t)str;
  }
-@@ -6881,7 +6880,7 @@
+@@ -6880,7 +6881,7 @@
           i1->array_part == i2->array_part;
  }
  
--#ifdef UPB_UNALIGNED_READS_OK || defined(__s390x__)
-+#ifdef UPB_UNALIGNED_READS_OK
+-#ifdef UPB_UNALIGNED_READS_OK
++#ifdef UPB_UNALIGNED_READS_OK || defined(__s390x__)
  /* -----------------------------------------------------------------------------
   * MurmurHash2, by Austin Appleby (released as public domain).
   * Reformatted and C99-ified by Joshua Haberman.

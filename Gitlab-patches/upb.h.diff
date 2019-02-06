@@ -1,7 +1,5 @@
-diff --git a/ruby/ext/google/protobuf_c/upb.h b/ruby/ext/google/protobuf_c/upb.h
-index f441c89c..767c5151 100644
---- a/ruby/ext/google/protobuf_c/upb.h
-+++ b/ruby/ext/google/protobuf_c/upb.h
+--- upb.h.orig	2019-02-04 04:02:21.801869562 -0500
++++ upb.h	2019-02-04 03:59:27.215503868 -0500
 @@ -13,6 +13,7 @@
  #include <stdarg.h>
  #include <stdbool.h>
@@ -10,7 +8,7 @@ index f441c89c..767c5151 100644
  
  #ifdef __cplusplus
  namespace upb {
-@@ -8515,6 +8516,7 @@ UPB_INLINE uint64_t upb_vencode32(uint32_t val) {
+@@ -8515,6 +8516,7 @@
    UPB_ASSERT(bytes <= 5);
    memcpy(&ret, buf, bytes);
    UPB_ASSERT(ret <= 0xffffffffffU);
