@@ -1,0 +1,11 @@
+--- grpc.gemspec.orig	2019-02-05 04:22:18.550032000 -0500
++++ grpc.gemspec	2019-02-05 04:23:12.743863000 -0500
+@@ -32,7 +32,7 @@
+   s.add_dependency 'google-protobuf', '~> 3.1'
+   s.add_dependency 'googleapis-common-protos-types', '~> 1.0.0'
+ 
+-  s.add_development_dependency 'bundler',            '~> 1.9'
++  s.add_development_dependency 'bundler',            '~> 2.0.1'
+   s.add_development_dependency 'facter',             '~> 2.4'
+   s.add_development_dependency 'logging',            '~> 2.0'
+   s.add_development_dependency 'simplecov',          '~> 0.14.1'
