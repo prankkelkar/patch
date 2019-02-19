@@ -5,11 +5,11 @@
  endif # HAS_SYSTEM_OPENSSL_ALPN
  
 +ifeq ($(EMBED_OPENSSL),false)
-+OPENSSL_DEP += /scratch/loz/prasanna/new/grpc/third_party/openssl-1.1.0g/libssl.a /scratch/loz/prasanna/new/grpc/third_party/openssl-1.1.0g/libcrypto.a
-+OPENSSL_MERGE_LIBS += /scratch/loz/prasanna/new/grpc/third_party/openssl-1.1.0g/libssl.a /scratch/loz/prasanna/new/grpc/third_party/openssl-1.1.0g/libcrypto.a
-+OPENSSL_MERGE_OBJS += $(wildcard /scratch/loz/prasanna/new/grpc/third_party/openssl-1.1.0g/grpc_obj/*.o)
++OPENSSL_DEP += GOPATH/grpc/third_party/openssl-1.1.0g/libssl.a GOPATH/grpc/third_party/openssl-1.1.0g/libcrypto.a
++OPENSSL_MERGE_LIBS += GOPATH/grpc/third_party/openssl-1.1.0g/libssl.a GOPATH/grpc/third_party/openssl-1.1.0g/libcrypto.a
++OPENSSL_MERGE_OBJS += $(wildcard GOPATH/grpc/third_party/openssl-1.1.0g/grpc_obj/*.o)
 +# need to prefix these to ensure overriding system libraries
-+CPPFLAGS := -I/scratch/loz/prasanna/new/grpc/third_party/openssl-1.1.0g/include $(CPPFLAGS)
++CPPFLAGS := -IGOPATH/grpc/third_party/openssl-1.1.0g/include $(CPPFLAGS)
 +endif
 +
  OPENSSL_DEP :=
