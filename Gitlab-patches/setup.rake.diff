@@ -1,0 +1,10 @@
+--- setup.rake_ORIG	2019-02-18 19:10:52.182065187 +0300
++++ setup.rake	2019-02-18 19:11:00.592052288 +0300
+@@ -1,7 +1,6 @@
+ namespace :gitlab do
+   desc "GitLab | Setup production application"
+   task setup: :gitlab_environment do
+-    check_gitaly_connection
+     setup_db
+   end
+ 

@@ -1,0 +1,11 @@
+--- config/gitlab.yml.orig	2019-02-19 16:17:34.524788641 +0530
++++ config/gitlab.yml	2019-02-19 16:18:52.404788641 +0530
+@@ -30,7 +30,7 @@
+   gitlab:
+     ## Web server settings (note: host is the FQDN, do not include http://)
+     host: localhost
+-    port: 80 # Set to 443 if using HTTPS, see installation.md#using-https for additional HTTPS configuration details
++    port: 8234 # Set to 443 if using HTTPS, see installation.md#using-https for additional HTTPS configuration details
+     https: false # Set to true if using HTTPS, see installation.md#using-https for additional HTTPS configuration details
+ 
+     # Uncomment this line below if your ssh host is different from HTTP/HTTPS one
