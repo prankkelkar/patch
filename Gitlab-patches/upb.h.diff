@@ -11,8 +11,8 @@
 @@ -8515,6 +8516,7 @@
    UPB_ASSERT(bytes <= 5);
    memcpy(&ret, buf, bytes);
-   UPB_ASSERT(ret <= 0xffffffffffU);
 +  ret = bswap_64(ret);
+   UPB_ASSERT(ret <= 0xffffffffffU);
    return ret;
  }
  
