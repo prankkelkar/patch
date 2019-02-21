@@ -17,7 +17,7 @@
  }
  
 -#ifdef UPB_UNALIGNED_READS_OK
-+#ifdef UPB_UNALIGNED_READS_OK || defined(__s390x__)
++#if defined(UPB_UNALIGNED_READS_OK) || defined(__s390x__)
  /* -----------------------------------------------------------------------------
   * MurmurHash2, by Austin Appleby (released as public domain).
   * Reformatted and C99-ified by Joshua Haberman.
