@@ -1,5 +1,5 @@
---- config/gitlab.yml.orig	2019-02-19 16:17:34.524788641 +0530
-+++ config/gitlab.yml	2019-02-19 16:18:52.404788641 +0530
+--- config/gitlab.yml.example	2019-02-22 10:19:57.722481570 +0400
++++ config/gitlab.yml	2019-02-22 10:22:31.062329414 +0400
 @@ -30,7 +30,7 @@
    gitlab:
      ## Web server settings (note: host is the FQDN, do not include http://)
@@ -9,3 +9,12 @@
      https: false # Set to true if using HTTPS, see installation.md#using-https for additional HTTPS configuration details
  
      # Uncomment this line below if your ssh host is different from HTTP/HTTPS one
+@@ -666,7 +666,7 @@
+   # CAUTION!
+   # Use the default values unless you really know what you are doing
+   git:
+-    bin_path: /usr/bin/git
++    bin_path: /usr/local/bin/git
+ 
+   ## Webpack settings
+   # If enabled, this will tell rails to serve frontend assets from the webpack-dev-server running
